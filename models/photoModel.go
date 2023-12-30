@@ -1,12 +1,9 @@
 package models
 
-import "gorm.io/gorm"
+import 
+	"github.com/erwinmareto/profile-api-go/app"
 
 type Photo struct {
-	gorm.Model
-	Title string
-	Caption string
-	PhotoUrl string
-	UserId int
+	app.Photo
 	User User
 }

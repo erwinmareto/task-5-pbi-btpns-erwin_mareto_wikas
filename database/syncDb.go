@@ -1,8 +1,7 @@
 package database
 
-import "github.com/erwinmareto/models"
+import "github.com/erwinmareto/profile-api-go/models"
 
 func SyncDb() {
-	DB.AutoMigrate(&models.User{})
-	DB.AutoMigrate(&models.Photo{})
+	DB.AutoMigrate(&models.User{}, &models.Photo{})
 }

@@ -1,11 +1,8 @@
 package models
 
-import "gorm.io/gorm"
+import "github.com/erwinmareto/profile-api-go/app"
 
 type User struct {
-	gorm.Model
-	Username string `gorm:"not null"`
-	Email    string `gorm:"not null;unique"`
-	Password string `gorm:"not null"`
+	app.User
 	Photos []Photo `gorm:"constraint:OnUpdate:CASCADE,OnDelete:CASCADE"`
 }
